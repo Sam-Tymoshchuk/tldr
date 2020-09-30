@@ -35,3 +35,7 @@
 - Pass client certificate and key for a resource, skipping certificate validation:
 
 `curl --cert {{client.pem}} --key {{key.pem}} --insecure {{https://example.com}}`
+
+- Make a requests directly against IP addresses, bypassing DNS, get verbose output and discard responce content:
+
+`curl -H "Host: www.example.com" -v -s -o /dev/null 54.84.253.153`
